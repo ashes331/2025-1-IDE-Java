@@ -10,10 +10,10 @@ public class JDBCEx1 {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			DriverManager.getConnection("jdbc:mysql://localhost:3306/sampledb", "root", "dongyang");
-			System.out.println("db 연결 완료");
+			System.out.println("db connect Ok");
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
-			System.out.println("db 연결 오류");
+			System.out.println("db connect Error");
 			e.printStackTrace();
 		}
 
