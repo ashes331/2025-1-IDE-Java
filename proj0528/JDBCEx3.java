@@ -12,15 +12,15 @@ public class JDBCEx3 {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection conn = 
 					DriverManager.getConnection("jdbc:mysql://localhost:3306/sampledb", "root","dongyang");
-			System.out.println("sampledb ¿¬°á ¿Ï·á");
+			System.out.println("sampledb connect Ok");
 			
 			Statement stmt = conn.createStatement();
 			// String sql = "select * from student;";
-			// String sql2 = "insert into student values('0000002', 'ÀÌÁ¤ÈÄ', 'Ã¼À°ÇĞ°ú')";
-			// String sql3 = "update student set dept='»÷µğ¿¡ÀÌ°í', where name='ÀÌÁ¤ÈÄ'; ";
-			String sql4 = "delete from student where name='±èÃ¶¼ö'; ";
+			// String sql2 = "insert into student values('0000002', 'ì´ì •í›„', 'ì²´ìœ¡í•™ê³¼')";
+			// String sql3 = "update student set dept='ìƒŒë””ì—ì´ê³ ', where name='ì´ì •í›„'; ";
+			String sql4 = "delete from student where name='ê¹€ì² ìˆ˜'; ";
 			stmt.executeUpdate(sql4);
-			System.out.println("ÀÔ·Â ¿Ï·á");
+			System.out.println("ì…ë ¥ ì™„ë£Œ");
 			
 			
 			stmt.close();
@@ -28,7 +28,7 @@ public class JDBCEx3 {
 		
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated method stub
-			System.out.println("db ¿¬°á ¿À·ù");
+			System.out.println("db connect Error");
 			e.printStackTrace();
 		}
 
