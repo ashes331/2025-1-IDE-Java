@@ -12,7 +12,7 @@ public class JDBCEx2 {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection conn = 
 					DriverManager.getConnection("jdbc:mysql://localhost:3306/sampledb", "root","dongyang");
-			System.out.println("sampledb 연결 완료");
+			System.out.println("sampledb connect Ok");
 			
 			Statement stmt = conn.createStatement();
 			String sql = "select * from student;";
@@ -29,7 +29,7 @@ public class JDBCEx2 {
 		
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated method stub
-			System.out.println("db 연결 오류");
+			System.out.println("db connect Error");
 			e.printStackTrace();
 		}
 
